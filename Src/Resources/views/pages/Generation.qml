@@ -228,6 +228,10 @@ Item {
             delegate: Component {
                 Loader {
                     property string _name: model.name
+                    property int _playerNum: model.playerNum
+                    property int _level: model.level
+                    property string _rarity: model.rarity
+                    property string _manufacturer: model.manufacturer
 
                     width: gridPackages.packageWidth
                     height: gridPackages.packageHeight

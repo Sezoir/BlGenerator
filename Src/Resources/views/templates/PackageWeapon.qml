@@ -10,17 +10,24 @@ import "../templates"
 
 Item {
     property string name: parent._name
+    property int playerNum: parent._playerNum
+    property int level: parent._level
+    property string rarity: parent._rarity
+    property string manufacturer: parent._manufacturer
 
     id: root
-    //anchors.fill: parent
     height: parent.height
     width: parent.width
     x: 0
     y: 0
 
     PackageTemplate {
-        packageName: name
-        //anchors.fill: parent
+        packageName: parent.name
+        playerNum: parent.playerNum
+        level: parent.level
+        rarity: parent.rarity
+        manufacturer: parent.manufacturer
+
         height: parent.height
         width: parent.width
         x: 0

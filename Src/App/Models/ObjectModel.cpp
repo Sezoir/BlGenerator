@@ -1,5 +1,8 @@
 #include "ObjectModel.h"
 
+// Qt libs
+#include <QDebug>
+
 // Weapon object
 #include "../Generation/Weapon/Object.h"
 
@@ -39,12 +42,12 @@ namespace App::Models {
         if (!index.isValid() || !m_list)
             return QVariant();
 
-        Generation::BaseObject item = m_list->items().at(index.row());
+        std::shared_ptr<Generation::BaseObject> item = m_list->items().at(index.row());
 
-        switch(item.m_type)
+        switch(item->m_type)
         {
         case Generation::BaseObject::Type::Weapon:
-            return weaponData(&item, role);
+            return weaponData(item, role);
         case Generation::BaseObject::Type::Shield:
             break;
         case Generation::BaseObject::Type::GrenadeMod:
@@ -71,17 +74,17 @@ namespace App::Models {
         if(!m_list)
             return false;
 
-        Generation::BaseObject item = m_list->items().at(index.row());
+        std::shared_ptr<Generation::BaseObject> item = m_list->items().at(index.row());
         switch(role)
         {
         case TypeRole:
-            item.m_type = item.stringToType(value.toString());
+            item->m_type = item->stringToType(value.toString());
             break;
         case RarityRole:
-            item.m_rarity = value.toString();
+            item->m_rarity = value.toString();
             break;
         case LevelRole:
-            item.m_lvl = value.toInt();
+            item->m_lvl = value.toInt();
             break;
         case NameRole:
             qDebug() << "Error";
@@ -111,6 +114,30 @@ namespace App::Models {
         names[RarityRole] = "rarity";
         names[LevelRole] = "level";
         names[NameRole] = "name";
+        names[WeaponTypeRole] = "weaponType";
+        names[WeaponFocusRole] = "weaponFocus";
+        names[RangedDamageRole] = "rangedDamage";
+        names[MeleeDamageRole] = "meleeDamage";
+        names[RangedHitRole] = "rangedHit";
+        names[MeleeHitRole] = "meleeHit";
+        names[RangeRole] = "range";
+        names[ManufacturerRole] = "manufacturer";
+
+        names[AmmoRole] = "ammo";
+
+          /*
+                    WeaponTypeRole,
+                    WeaponFocusRole,
+                    RangedDamageRole,
+                    MeleeDamageRole,
+                    RangedHitRole,
+                    MeleeHitRole,
+                    RangeRole,
+                    ManufacturerRole,
+                    ElementsRole,
+                    EffectsRole,
+                    AmmoRole
+           */
         return names;
     }
 
@@ -148,11 +175,9 @@ namespace App::Models {
         endResetModel();
     }
 
-    QVariant ObjectModel::weaponData(Generation::BaseObject * item, int role) const
+    QVariant ObjectModel::weaponData(std::shared_ptr<Generation::BaseObject> item, int role) const
     {
-        //Generation::Weapon::Weapon* weapon = static_cast<Generation::Weapon::Weapon*>(item);
-
-        auto weapon = static_cast<Generation::Weapon::Weapon*>(item);
+        auto weapon = std::static_pointer_cast<Generation::Weapon::Weapon>(item);
 
         switch(role)
         {
@@ -163,7 +188,6 @@ namespace App::Models {
         case LevelRole:
             return QVariant(weapon->m_lvl);
         case NameRole:
-            qDebug() << weapon->m_name;
             return QVariant(weapon->m_name);
         case WeaponTypeRole:
             return QVariant(weapon->m_weaponType);

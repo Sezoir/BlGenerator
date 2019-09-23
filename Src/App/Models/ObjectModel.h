@@ -50,7 +50,7 @@ namespace App::Models {
     private:
         ObjectList *m_list;
 
-        QVariant weaponData(Generation::BaseObject * item, int role) const;
+        QVariant weaponData(std::shared_ptr<Generation::BaseObject> item, int role) const;
 
     };
 }

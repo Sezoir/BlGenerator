@@ -45,8 +45,8 @@ Item {
         z: 3
         hoverEnabled: true
         propagateComposedEvents: true
-        onPressed: root.state = "EXTENDED"
-        onReleased: root.state = "DEFAULT"
+//        onPressed: root.state = "EXTENDED"
+//        onReleased: root.state = "DEFAULT"
     }
 
     states: [
@@ -268,6 +268,7 @@ Item {
                         text: packageName
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
+                        fontSizeMode: Text.Fit
                     }
 
 //                    Rectangle {
@@ -310,12 +311,15 @@ Item {
                                 anchors {
                                     top: parent.top
                                     left: parent.left
+                                    leftMargin: 5
                                     right: parent.right
+                                    rightMargin: 5
                                     bottom: parent.bottom
                                 }
                                 text: rarity
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
+                                fontSizeMode: Text.Fit
                             }
                         }
                         Item {
@@ -327,7 +331,7 @@ Item {
                                 id: expandIcon
                                 size: parent.height
                                 anchors.centerIn: parent
-                                visible: middle.height < middle.contentHeight
+                                visible: middle.height < middle.contentHeight + 2
                                 opacity: 1
                                 source: FluidControls.Utils.iconUrl("hardware/keyboard_arrow_down")
                             }
@@ -342,12 +346,15 @@ Item {
                                 anchors {
                                     top: parent.top
                                     left: parent.left
+                                    leftMargin: 5
                                     right: parent.right
+                                    rightMargin: 5
                                     bottom: parent.bottom
                                 }
                                 text: manufacturer
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
+                                fontSizeMode: Text.Fit
                             }
                         }
                     }

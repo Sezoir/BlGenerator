@@ -18,8 +18,8 @@ namespace App::View {
             , m_engine(engine)
             , m_generator(generator)
             , m_settings(settings)
-            , m_objectList(new Models::ObjectList(parent))
             , m_objectModel(new Models::ObjectModel(parent))
+            , m_objectList(new Models::ObjectList(parent))//m_objectModel->list())
             , m_rarity("All")
             , m_level(1)
             , m_loot("Hello World!")
@@ -97,9 +97,8 @@ namespace App::View {
 //            test.m_lvl = 30;
 //            test.m_rarity = "rarity";
             std::shared_ptr<Generation::BaseObject> test = m_generator.create(m_level);
-            qDebug() << "GenerateView says name is" << std::static_pointer_cast<Generation::Weapon::Weapon>(test)->m_name;
 
-            m_objectList->addItem(*(test.get()));
+            m_objectList->addItem(test);
 //            for(int i = 0; i < 1; i++)
 //            {
 //            qDebug() << QString("Clicked!") << counter;

@@ -4,8 +4,14 @@
 #include <QObject>
 #include <QVector>
 
+// Std libs
+#include <memory>
+
 // Base object struct
 #include "../Generation/BaseObject.h"
+
+// Weapon object struct
+#include "../Generation/Weapon/Object.h"
 
 namespace App::Models {
     class ObjectList : public QObject
@@ -14,11 +20,11 @@ namespace App::Models {
     public:
         explicit ObjectList(QObject *parent = nullptr);
 
-        QVector<Generation::BaseObject> items() const;
+        QVector<std::shared_ptr<Generation::BaseObject>> items() const;
 
-        void addItem(Generation::BaseObject item);
+        void addItem(std::shared_ptr<Generation::BaseObject> item);
 
-        bool setItemAt(int index, const Generation::BaseObject & item);
+        bool setItemAt(int index, const std::shared_ptr<Generation::BaseObject> & item);
 
     signals:
         void preItemAppended();
@@ -33,7 +39,7 @@ namespace App::Models {
         void removeItems();
 
     private:
-        QVector<Generation::BaseObject> m_Items;
+        QVector<std::shared_ptr<Generation::BaseObject>> m_Items;
     };
 }
 

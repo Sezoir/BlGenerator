@@ -104,11 +104,11 @@ namespace App::View {
             // Settings class
             Settings::Settings & m_settings;
 
-            // Custom model list for objects
-            Models::ObjectList * m_objectList;
-
             // Custom model for objects
             Models::ObjectModel * m_objectModel;
+
+            // Custom model list for objects
+            Models::ObjectList * m_objectList;
 
             // List of all rarities
             QStringList m_rarities;

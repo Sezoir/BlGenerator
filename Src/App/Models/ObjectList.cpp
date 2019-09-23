@@ -1,17 +1,19 @@
 #include "ObjectList.h"
 
+#include <QDebug>
+
 namespace App::Models {
     ObjectList::ObjectList(QObject *parent) : QObject(parent)
     {
 
     }
 
-    QVector<Generation::BaseObject> ObjectList::items() const
+    QVector<std::shared_ptr<Generation::BaseObject>> ObjectList::items() const
     {
         return m_Items;
     }
 
-    void ObjectList::addItem(Generation::BaseObject item)
+    void ObjectList::addItem(std::shared_ptr<Generation::BaseObject> item)
     {
         emit preItemAppended();
 
@@ -20,7 +22,7 @@ namespace App::Models {
         emit postItemAppended();
     }
 
-    bool ObjectList::setItemAt(int index, const Generation::BaseObject &item)
+    bool ObjectList::setItemAt(int index, const std::shared_ptr<Generation::BaseObject> &item)
     {
         if(index < 0 || index >= m_Items.size())
             return false;
@@ -30,6 +32,7 @@ namespace App::Models {
         //const Generation::BaseObject & oldItem = m_Items.at(index);
 
         m_Items[index] = item;
+
         return true;
     }
 
