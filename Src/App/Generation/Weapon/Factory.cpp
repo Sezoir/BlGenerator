@@ -49,7 +49,7 @@ namespace App::Generation::Weapon
     std::shared_ptr<Weapon> Factory::create(int lvl, QString rarity)
     {
         // Create default weapon template struct to be filled
-        auto weapon = std::make_shared<Weapon>("weapon", rarity, lvl);
+        auto weapon = std::make_shared<Weapon>(BaseObject::Type::Weapon, rarity, lvl);
 
 //        // Determine weapon type
 //            // Roll for a sword or gun

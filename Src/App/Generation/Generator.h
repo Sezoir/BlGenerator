@@ -51,7 +51,7 @@ namespace App::Generation {
              * @brief Create a random loot
              * @return
              */
-            std::shared_ptr<BaseObject> create();
+            std::shared_ptr<BaseObject> create(int level);
 
         signals:
 

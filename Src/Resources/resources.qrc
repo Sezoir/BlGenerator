@@ -1,5 +1,19 @@
 <RCC>
     <qresource prefix="/">
         <file>views/main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>views/pages/Generation.qml</file>
+        <file>views/pages/Creation.qml</file>
+        <file>views/templates/CusSidebar.qml</file>
+        <file>views/templates/CusScrollBar.qml</file>
+        <file>assets/images/ObjBackground.png</file>
+        <file>views/templates/PackageBackground.qml</file>
+        <file>views/templates/PackageForeground.qml</file>
+        <file>views/templates/PackageTemplate.qml</file>
+        <file>views/templates/PackageProperty.qml</file>
+        <file>views/templates/PackageHexShape.qml</file>
+        <file>assets/images/Sniper.Ico</file>
+        <file>assets/images/Pistol.ico</file>
+        <file>views/templates/PackageWeapon.qml</file>
     </qresource>
 </RCC>

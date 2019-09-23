@@ -9,12 +9,12 @@
 #include "View/Generate.h"
 
 namespace App {
-    Application::Application(QObject * t_parent, QQmlApplicationEngine * t_engine)
-        :   QObject(t_parent)
-        ,   m_engine(t_engine)
-        ,   m_settings(*new Settings::Settings(t_parent))
-        ,   m_generator(*new Generation::Generator(t_parent , m_settings))
-        ,   m_controllerFactory(*new Platform::Factory<View::Controller>(t_parent))
+    Application::Application(QObject * parent, QQmlApplicationEngine * engine)
+        :   QObject(parent)
+        ,   m_engine(engine)
+        ,   m_settings(*new Settings::Settings(parent))
+        ,   m_generator(*new Generation::Generator(parent, m_settings))
+        ,   m_controllerFactory(*new Platform::Factory<View::Controller>(parent))
     {
         createManager();
         registerManager();
@@ -29,7 +29,7 @@ namespace App {
     {
         //QString create(QString view, Args & ... args)
         //m_controllerFactory.create<View::Generate>("Generate", this, m_generator);
-        m_controllerFactory.create<View::Generate, true>(this, m_generator);
+        m_controllerFactory.create<View::Generate, true>(this, m_engine, m_generator, m_settings);
     }
 
     void Application::registerManager()

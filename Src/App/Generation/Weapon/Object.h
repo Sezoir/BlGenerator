@@ -19,7 +19,7 @@ namespace App::Generation::Weapon
     // @todo may change name to object for readability
     struct Weapon : public BaseObject
     {
-        Weapon(QString type, QString rarity, int lvl)
+        Weapon(BaseObject::Type type, QString rarity, int lvl)
             : BaseObject(type, rarity, lvl)
         {
 

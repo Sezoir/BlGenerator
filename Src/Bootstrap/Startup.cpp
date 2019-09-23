@@ -1,6 +1,9 @@
 #include "Startup.h"
 
+#include <QGuiApplication>
 #include <QQuickStyle>
+#include <QDir>
+#include <QtQuickControls2>
 
 namespace Bootstrap {
     Startup::Startup()
@@ -9,6 +12,12 @@ namespace Bootstrap {
         ,   m_isValid(true)
         ,   m_application(*new App::Application(this, &m_engine))
     {
+        // Add import paths for qml libs
+        m_engine.addImportPath(QCoreApplication::applicationDirPath() + QDir::separator() +
+                               QLatin1String("..") + QDir::separator() + QLatin1String("..") +
+                               QDir::separator() + QLatin1String("Libs") + QDir::separator() +
+                               QLatin1String("fluid") + QDir::separator() + QLatin1String("qml"));
+
         // Configure theme
         configTheme();
 
@@ -19,8 +28,8 @@ namespace Bootstrap {
     void Startup::configTheme()
         {
             // Setup the styling
-            if (QQuickStyle::name().isEmpty())
-                QQuickStyle::setStyle(QLatin1String("Material"));
+//            if (QQuickStyle::name().isEmpty())
+//                QQuickStyle::setStyle(QLatin1String("Material"));
         }
 
     void Startup::loadMainView()

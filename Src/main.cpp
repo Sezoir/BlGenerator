@@ -15,17 +15,6 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-//    // Create container
-//    RandContainer randContainer;
-
-//    // Create the uniform int distro
-//    randContainer.create(RandContainer::Distrobutions::UniformInt, 0, 100);
-
-//    randContainer.create(RandContainer::Distrobutions::ExponentialDouble, 3.5);
-
-//    qDebug() << randContainer.get<double>(RandContainer::Distrobutions::ExponentialDouble);
-//    qDebug() << randContainer.get<int>(RandContainer::Distrobutions::UniformInt);
-
     // Boot the applcation
     Bootstrap::Startup loader;
 

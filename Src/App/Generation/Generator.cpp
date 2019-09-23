@@ -60,11 +60,11 @@ namespace App::Generation {
 
     }
 
-    std::shared_ptr<BaseObject> Generator::create()
+    std::shared_ptr<BaseObject> Generator::create(int level)
     {
         // Determine the type of object
         int objChance = m_random.get<int>(m_generalDistribution);
-        int level = 30;
+        //int level = 30;
 
         //m_objects.push_back(m_weaponFactory.create(level, rarity));
 

@@ -1,4 +1,8 @@
-QT += quick quickcontrols2
+# Set project as main app
+TEMPLATE = app
+
+QT += qml quick quickcontrols2
+
 CONFIG += c++17
 
 # The following define makes your compiler emit warnings if you use
@@ -19,6 +23,8 @@ SOURCES += \
              App/Generation/Weapon/Factory.cpp \
              App/Generation/Weapon/GunFactory.cpp \
              App/Generation/Weapon/MeleeFactory.cpp \
+    App/Models/ObjectList.cpp \
+    App/Models/ObjectModel.cpp \
              App/Services/Jsonfile.cpp \
              App/Settings/General.cpp \
              App/Settings/Guns.cpp \
@@ -38,6 +44,8 @@ HEADERS += \
              App/Generation/Weapon/GunFactory.h \
              App/Generation/Weapon/MeleeFactory.h \
              App/Generation/Weapon/Object.h \
+    App/Models/ObjectList.h \
+    App/Models/ObjectModel.h \
              App/Services/Jsonfile.h \
              App/Services/RandContainer.h \
              App/Settings/General.h \
@@ -53,10 +61,41 @@ HEADERS += \
 RESOURCES += Resources/resources.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+QML_IMPORT_PATH = $$OUT_PWD/../Libs/fluid/qml
+
+# Add embed icons
+CONFIG += fluid_resource_icons
+
+# Configs for fluid framework
+qtConfig(static) {
+    QMAKE_LIBDIR += \
+        $$OUT_PWD/../Libs/fluid/qml/Fluid/Core \
+        $$OUT_PWD/../Libs/fluid/qml/Fluid/Controls \
+        $$OUT_PWD/../Libs/fluid/qml/Fluid/Controls/Private \
+        $$OUT_PWD/../Libs/fluid/qml/Fluid/Templates
+    QTPLUGIN += \
+        qsvg \
+        fluidcoreplugin \
+        fluidcontrolsplugin \
+        fluidcontrolsprivateplugin \
+        fluidtemplatesplugin
+}
+
 
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
+
+# Windows specific actions
+win32 {
+    # Bundle Fluid QML plugins with the application
+    WINDEPLOYQT_OPTIONS = -qmldir $$OUT_PWD/../Libs/fluid/qml/Fluid
+}
+
+## Deploy fluid docs
+#fluiddocs.files = $$OUT_PWD/../Libs/fluid/
+
+## Register deployments
+#INSTALLS += fluiddocs
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
