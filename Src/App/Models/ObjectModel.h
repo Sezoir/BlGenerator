@@ -16,6 +16,7 @@ namespace App::Models {
         enum {
             TypeRole = Qt::UserRole,
             RarityRole,
+            RarityColorRole,
             LevelRole,
             NameRole,
             WeaponTypeRole,

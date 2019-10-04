@@ -184,6 +184,9 @@ Item {
         text: playerNum
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
+        style: Text.Outline
+        styleColor: "Black"
+        color: "white"
     }
 
     FluidControls.HeadlineLabel {
@@ -200,14 +203,18 @@ Item {
         text: level
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
+        style: Text.Outline
+        styleColor: "Black"
+        color: "white"
     }
 
     RowLayout {
 
         anchors {
             top: packBackground.top
-            topMargin: packBackground.upperCornerTrigHeight*packBackground.height
+            topMargin: packBackground.upperCornerTrigHeight*packBackground.height + 3
             bottom: packForeground.top
+            bottomMargin: 3
             left: playerText.right
             leftMargin: packBackground.upperCornerTrigWidth*packBackground.width + 2
             right: levelText.left
@@ -220,12 +227,18 @@ Item {
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignLeft
             text: "Player"
+            style: Text.Outline
+            styleColor: "Black"
+            color: "white"
         }
         FluidControls.SubheadingLabel {
             Layout.fillHeight: true
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignRight
             text: "Level"
+            style: Text.Outline
+            styleColor: "Black"
+            color: "white"
         }
     }
 
@@ -268,7 +281,12 @@ Item {
                         text: packageName
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
-                        fontSizeMode: Text.Fit
+                        //fontSizeMode: Text.Fit
+                        fontSizeMode: Text.VerticalFit
+                        wrapMode: Text.WordWrap
+                        style: Text.Outline
+                        styleColor: "Black"
+                        color: rarityColor
                     }
 
 //                    Rectangle {
@@ -284,10 +302,12 @@ Item {
                     contentHeight: objectProperties.height
                     contentWidth: objectProperties.width
 
-                    clip: true
+                    //clip: true
 
                     ColumnLayout {
+                        property alias rarityColor: root.rarityColor
                         id: objectProperties
+
                         anchors {
                             left: parent.left
                             right: parent.right
@@ -320,6 +340,9 @@ Item {
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 fontSizeMode: Text.Fit
+                                style: Text.Outline
+                                styleColor: "Black"
+                                color: "white"
                             }
                         }
                         Item {
@@ -355,6 +378,9 @@ Item {
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 fontSizeMode: Text.Fit
+                                style: Text.Outline
+                                styleColor: "Black"
+                                color: "white"
                             }
                         }
                     }

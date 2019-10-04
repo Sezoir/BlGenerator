@@ -38,94 +38,36 @@ Item {
         z: 3
     }
 
-//    PackageTemplate {
-//        id: testone
-//        x: 500
-//        y: 100
-//        height: 320
-//        width: 250
-//    }
-//    Rectangle {
-//        height: 40
-//        width: 40
-//        color: "red"
-//        anchors.top: testone.bottom
-//        anchors.left: testone.left
-//    }
-
-    PackageWeapon {
-        id: test
-        x: 900
-        y: 100
+    PackageElementProperty {
+        id: elementProp
+        x: 300
+        y: 200
         width: 250
-        height: 320
+        //height: 30
 
-//        PackageProperty {
-//            id: pack
-//            Layout.height: 20
-//            width: parent.width
-//        }
-//        PackageProperty {
-//            id: packq
-//            key: "tedsffsd"
-//            value: "10d20"
-//            Layout.preferredWidth: test.contentWidth
-//        }
-//        PackageProperty {
-//            id: packw
-//            key: "tedsffsd"
-//            value: "10d20"
-//            height: 20
-//            Layout.preferredWidth: test.contentWidth
-//        }
-//        PackageProperty {
-//            id: packe
-//            key: "tedsffsd"
-//            value: "10d20"
-//            height: 20
-//            Layout.preferredWidth: test.contentWidth
-//        }
-//        PackageProperty {
-//            id: packr
-//            key: "tedsffsd"
-//            value: "10d20"
-//            height: 20
-//            Layout.preferredWidth: test.contentWidth
-//        }
-//        PackageProperty {
-//            id: packt
-//            key: "tedsffsd"
-//            value: "10d20"
-//            height: 20
-//            Layout.preferredWidth: test.contentWidth
-//        }
-//        PackageProperty {
-//            id: packy
-//            key: "tedsffsd"
-//            value: "10d20"
-//            height: 20
-//            Layout.preferredWidth: test.contentWidth
-//        }
-//        PackageProperty {
-//            id: packu
-//            key: "tedsffsd"
-//            value: "10d20"
-//            height: 20
-//            Layout.preferredWidth: test.contentWidth
-//        }
-
-
-//        Rectangle {
-//            width: 40
-//            Layout.preferredHeight: 40
-//            color: "red"
-//        }
-//        Rectangle {
-//            width: 40
-//            Layout.preferredHeight: 40
-//            color: "blue"
-//        }
+        elements: {
+            "fire" :
+            {
+               "color" : "red",
+               "damage" : "1d6",
+               "condition" : "Healthbar",
+               "chance" : "16",
+               "effect" : "Does something",
+               "iconPath" : "/Config/Images/Fire.ico"
+            },
+            "corrosion" :
+            {
+                "color" : "green",
+                "damage" : "1d6",
+                "condition" : "Armour",
+                "chance" : "18",
+                "effect" : "Does something",
+                "iconPath" : "/Config/Images/Fire.ico"
+            }
+        }
 
 
     }
+
+
 }

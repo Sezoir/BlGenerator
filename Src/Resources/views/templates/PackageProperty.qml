@@ -13,6 +13,8 @@ Item {
     property bool hintEnabled : false
     property int textSize: 18
 
+    property color rarityColor: parent.rarityColor
+
     // Internal properties
     QtObject {
         id: internal
@@ -49,20 +51,27 @@ Item {
             Layout.alignment: Qt.AlignLeft
             Layout.leftMargin: 10
             text: key
-            //font.pixelSize: textSize
             verticalAlignment: Text.AlignVCenter
+            fontSizeMode: Text.Fit
+            style: Text.Outline
+            styleColor: "Black"
+            color: rarityColor
 
         }
 
         FluidControls.SubheadingLabel {
             Layout.preferredHeight: parent.height
-            Layout.preferredWidth: contentWidth
+            Layout.preferredWidth: 0.3*parent.width
             Layout.alignment: Qt.AlignRight
             Layout.rightMargin: 10
             text: value
-            //font.pixelSize: textSize
             verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignRight
             level: 2
+            fontSizeMode: Text.HorizontalFit
+            style: Text.Outline
+            styleColor: "Black"
+            color: rarityColor
         }
     }
 

@@ -4,6 +4,7 @@
 #include <QString>
 #include <QStringList>
 #include <QVariantList>
+#include <QVariantMap>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QVector>
@@ -379,6 +380,39 @@ namespace App::Generation
                 i.append("\n" + v.toString());
            i.append("\n");
            return i;
+        }
+
+        const QString getEffects()
+        {
+            // Declare base string
+            QString base;
+            // Iterate through each effect
+            for(auto effect : m_effects)
+            {
+                // Check if we have reached the end
+                // To check if we need a new line
+                if(!m_effects.endsWith(effect))
+                    base.push_back(effect.toString() + "\n");
+                else
+                    base.push_back(effect.toString());
+            }
+            // Return string
+            return base;
+        }
+
+        const QVariantMap toMap()
+        {
+            // Declare base empty map
+            QVariantMap base;
+
+            // Add each property of the element to it as qvariant strings/ints
+            base.insert("element", QVariant(toString()));
+            base.insert("damage", QVariant(m_damage.toString()));
+            base.insert("condition", QVariant(m_condition));
+            base.insert("chance", QVariant(m_chance));
+            base.insert("m_effects", QVariant(getEffects()));
+
+            return base;
         }
 
     };

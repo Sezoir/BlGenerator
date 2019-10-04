@@ -46,10 +46,10 @@ namespace App::Generation::Weapon
         segmentate();
     }
 
-    std::shared_ptr<Weapon> Factory::create(int lvl, QString rarity)
+    std::shared_ptr<Weapon> Factory::create(int lvl, QString rarity, QString rarityColor)
     {
         // Create default weapon template struct to be filled
-        auto weapon = std::make_shared<Weapon>(BaseObject::Type::Weapon, rarity, lvl);
+        auto weapon = std::make_shared<Weapon>(BaseObject::Type::Weapon, rarity, rarityColor, lvl);
 
 //        // Determine weapon type
 //            // Roll for a sword or gun

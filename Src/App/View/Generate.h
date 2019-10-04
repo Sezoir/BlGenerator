@@ -38,6 +38,7 @@ namespace App::View {
             Q_PROPERTY(QStringList rarities READ rarities NOTIFY raritiesChanged)
             Q_PROPERTY(QString rarity READ rarity WRITE setRarity)
             Q_PROPERTY(int level READ level WRITE setLevel)
+            Q_PROPERTY(int quantity READ quantity WRITE setQuantity)
 
         public:
             /**
@@ -87,12 +88,23 @@ namespace App::View {
             QString loot() const {return m_loot;}
             void setLoot(const QString &);
 
+            int quantity() const
+            {
+                return m_quantity;
+            }
+
+            void setQuantity(int quantity)
+            {
+                m_quantity = quantity;
+            }
+
         signals:
             void raritiesChanged();
             void lootChanged();
 
         public slots:
             void clicked();
+
 
         private:
             // Application engine
@@ -131,5 +143,6 @@ namespace App::View {
 
             QString m_loot;
             int counter;
+            int m_quantity;
         };
     }

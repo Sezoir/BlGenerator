@@ -22,6 +22,7 @@ namespace App::View {
             , m_objectList(new Models::ObjectList(parent))//m_objectModel->list())
             , m_rarity("All")
             , m_level(1)
+            , m_quantity(1)
             , m_loot("Hello World!")
         {
             counter = 0;
@@ -96,9 +97,12 @@ namespace App::View {
 //            Generation::BaseObject test;
 //            test.m_lvl = 30;
 //            test.m_rarity = "rarity";
-            std::shared_ptr<Generation::BaseObject> test = m_generator.create(m_level);
 
-            m_objectList->addItem(test);
+            for(int i = 0; i < m_quantity; i++)
+            {
+                std::shared_ptr<Generation::BaseObject> test = m_generator.create(m_level);
+                m_objectList->addItem(test);
+            }
 //            for(int i = 0; i < 1; i++)
 //            {
 //            qDebug() << QString("Clicked!") << counter;

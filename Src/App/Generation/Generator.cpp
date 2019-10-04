@@ -88,8 +88,10 @@ namespace App::Generation {
 
         // Determine rarity of object
         QString rarity = getRarity("weapon");
+        // Get associated rarity color
+        QString rarityColor = m_settings.general()->general()["rarity"].toMap()[rarity].toMap()["color"].toString();
 
-        auto weapon = m_weaponFactory.create(level, rarity);
+        auto weapon = m_weaponFactory.create(level, rarity, rarityColor);
 
         return std::move(weapon);
     }

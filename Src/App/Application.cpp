@@ -4,6 +4,7 @@
 #include <QQmlContext>
 #include <QString>
 #include <QDebug>
+#include <QDir>
 
 // Include view controllers.
 #include "View/Generate.h"
@@ -34,6 +35,10 @@ namespace App {
 
     void Application::registerManager()
     {
+        // Register some strings to be used in qml
+        m_engine->rootContext()->setContextProperty("applicationPath", QDir().currentPath());
+
+        // Register views
         m_engine->rootContext()->setContextProperty("GenerateController", m_controllerFactory.get<View::Generate, true>());
     }
 

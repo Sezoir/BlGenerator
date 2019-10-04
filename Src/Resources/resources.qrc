@@ -15,5 +15,6 @@
         <file>assets/images/Sniper.Ico</file>
         <file>assets/images/Pistol.ico</file>
         <file>views/templates/PackageWeapon.qml</file>
+        <file>views/templates/PackageElementProperty.qml</file>
     </qresource>
 </RCC>

@@ -99,6 +99,7 @@ Item {
                                 from: 1
                                 to: 30
                                 editable: true
+                                onValueModified: {GenerateController.quantity = value}
                             }
                             FluidControls.BodyLabel {
                                 text: "Quantity"
@@ -205,6 +206,7 @@ Item {
         //radius: 35
         border.width: 5
         border.color: "steelblue"
+        //clip: true
 
 
         GridView {
@@ -215,8 +217,17 @@ Item {
             anchors.fill: parent
             anchors.margins: 20
 
-            cellHeight: packageHeight + 30
+            cellHeight: packageHeight + 40
             cellWidth: packageWidth + 40
+
+            flickableDirection: Flickable.VerticalFlick
+
+            ScrollBar.vertical: ScrollBar {
+//                parent: middle.parent
+//                anchors.top: middle.top
+//                anchors.right: middle.right
+//                anchors.bottom: middle.bottom
+            }
 
             model: ObjectModel {
                 list: objectList
@@ -225,13 +236,40 @@ Item {
 //            delegate: Text {
 //                text: model.type + "\n" + model.rarity + "\n" + model.level
 //            }
+
             delegate: Component {
                 Loader {
                     property string _name: model.name
                     property int _playerNum: model.playerNum
                     property int _level: model.level
                     property string _rarity: model.rarity
+                    property color _rarityColor: model.rarityColor
                     property string _manufacturer: model.manufacturer
+
+                    property string _weaponType: model.weaponType
+                    property string _weaponFocus: model.weaponFocus
+                    property string _rangedDamage: model.rangedDamage
+                    property string _meleeDamage: model.meleeDamage
+                    property string _rangedHit: model.rangedHit
+                    property string _meleeHit: model.meleeHit
+                    property string _range: model.range
+                    property string _ammo: model.ammo
+                    property var _elements: model.elements
+                    property var _effects: model.effects
+
+                    /*
+            WeaponTypeRole,
+            WeaponFocusRole,
+            RangedDamageRole,
+            MeleeDamageRole,
+            RangedHitRole,
+            MeleeHitRole,
+            RangeRole,
+            ManufacturerRole,
+            ElementsRole,
+            EffectsRole,
+            AmmoRole
+                      */
 
                     width: gridPackages.packageWidth
                     height: gridPackages.packageHeight

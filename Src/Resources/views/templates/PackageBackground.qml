@@ -274,7 +274,7 @@ Item {
         id: typeIconBackground
         width: internal.lowerMiddleIndentWidth + 2*internal.lowerMiddleTrigWidth
         height: 45
-        color: backgroundColor
+        color: rarityColor
         border.color: "Black"
         border.width: 2
         anchors.horizontalCenter: parent.horizontalCenter

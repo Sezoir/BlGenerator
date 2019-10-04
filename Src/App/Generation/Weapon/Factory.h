@@ -58,7 +58,7 @@ namespace App::Generation::Weapon {
          * @param rarity: Rarity of the weapon
          * @return Shared pointer to the weapon struct
          */
-        std::shared_ptr<Weapon> create(int lvl, QString rarity);
+        std::shared_ptr<Weapon> create(int lvl, QString rarity, QString rarityColor);
 
     private:
         // Settings class

@@ -39,11 +39,27 @@ namespace App::Models {
 
     QVariant ObjectModel::data(const QModelIndex &index, int role) const
     {
+        // Check for valid index/list
         if (!index.isValid() || !m_list)
             return QVariant();
 
+        // Get copy of pointer to object currently wanted
         std::shared_ptr<Generation::BaseObject> item = m_list->items().at(index.row());
 
+        // Check base parameters for roles
+        switch(role)
+        {
+        case TypeRole:
+            return QVariant(item->typeToString(item->m_type));
+        case RarityRole:
+            return QVariant(item->m_rarity);
+        case LevelRole:
+            return QVariant(item->m_lvl);
+        case RarityColorRole:
+            return QVariant(item->m_rarityColor);
+        }
+
+        // Check parameters depending on type of object
         switch(item->m_type)
         {
         case Generation::BaseObject::Type::Weapon:
@@ -75,6 +91,7 @@ namespace App::Models {
             return false;
 
         std::shared_ptr<Generation::BaseObject> item = m_list->items().at(index.row());
+
         switch(role)
         {
         case TypeRole:
@@ -112,6 +129,7 @@ namespace App::Models {
         QHash<int, QByteArray> names;
         names[TypeRole] = "type";
         names[RarityRole] = "rarity";
+        names[RarityColorRole] = "rarityColor";
         names[LevelRole] = "level";
         names[NameRole] = "name";
         names[WeaponTypeRole] = "weaponType";
@@ -122,7 +140,8 @@ namespace App::Models {
         names[MeleeHitRole] = "meleeHit";
         names[RangeRole] = "range";
         names[ManufacturerRole] = "manufacturer";
-
+        names[ElementsRole] = "elements";
+        names[EffectsRole] = "effects";
         names[AmmoRole] = "ammo";
 
           /*
@@ -181,12 +200,6 @@ namespace App::Models {
 
         switch(role)
         {
-        case TypeRole:
-            return QVariant(weapon->typeToString(weapon->m_type));
-        case RarityRole:
-            return QVariant(weapon->m_rarity);
-        case LevelRole:
-            return QVariant(weapon->m_lvl);
         case NameRole:
             return QVariant(weapon->m_name);
         case WeaponTypeRole:
@@ -207,6 +220,10 @@ namespace App::Models {
             return QVariant(weapon->m_manufacturer);
         case AmmoRole:
             return QVariant(weapon->m_ammo);
+        case ElementsRole:
+            return QVariant(weapon->elementToMap());
+        case EffectsRole:
+            return QVariant(weapon->effectsToList());
         }
     }
 

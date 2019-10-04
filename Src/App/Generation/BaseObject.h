@@ -48,9 +48,10 @@ namespace App::Generation
             return Type::Error;
         }
 
-        BaseObject(Type type, QString rarity, int lvl)
+        BaseObject(Type type, QString rarity, QString rarityColor, int lvl)
             : m_type(type)
             , m_rarity(rarity)
+            , m_rarityColor(rarityColor)
             , m_lvl(lvl)
         {
 
@@ -58,6 +59,7 @@ namespace App::Generation
 
         Type m_type;
         QString m_rarity;
+        QString m_rarityColor = "black";
         int m_lvl = -1;
     };
 }
