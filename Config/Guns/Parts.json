@@ -1,0 +1,49 @@
+{
+	"sight" : 	
+				{
+					"hyperion" : {
+									"rangedHit" : 2
+								 },
+					"eridium" : {
+									"rangedHit" : 1
+								}
+				},
+	"stock" : 	
+				{
+					"hyperion" : {
+									"effect" : "Gain half cover from a shield for the first turn after reload"
+								 },
+					"eridium" : {
+									"effect" : "Deals definite elemental damage on first attack (if it hits) after a reload"
+								}
+				},
+	"trigger" : 	
+				{
+					"hyperion" : {
+									"effect" : "Can make two attack rolls (using bonus action) with disadvantage on the second attack, once per reload"
+								 },
+					"eridium" : {
+									"effect" : "Can make one attack with advantage, using your bonus action in the process once per reload"
+								}
+				},
+	"barrel" : 	
+				{
+					"hyperion" : {
+									"rangedDamage" : 1
+								 },
+					"eridium" : {
+									"elementDamage" : { "damage" : 3,
+														"type" : "all" }
+								}
+				},
+	"rocket" : 	
+				{
+					"hyperion" : {
+									"effect" : "Rocket can be usd as a mine instead, exploding when an enemy comes within a 10ft radius instead"
+								 },
+					"eridium" : {
+									"elementDamage" : {"damage" : "2d", 
+													   "type": "all"}
+								}
+				}
+}

@@ -1,0 +1,41 @@
+{
+    "bandit": 
+        {
+        "rangedDamage": 2,
+        "elements": [
+                     "fire",
+                     "electricity",
+                     "corrosion"
+                    ],
+        "numberElements": 1,
+        "prefix" : [ 
+                     "Meat fondler",
+                     "Shooty",
+                     "Pew-pew"
+                    ]
+        },
+    "torgue": 
+      	{
+        "elements": ["explosive"],
+        "numberElements": 1,
+        "prefix" : [ "Explosive",
+                     "Destructo",
+                     "Detonator"
+                    ],
+        "effect" : "Enemies in a 1ft radius of the enemy hit also take damage each to 1d4"
+        },
+    "maliwan": 
+        {
+        "elements": [
+                        "fire",
+                        "electricity",
+                        "corrosion"
+                    ],
+        "numberElements": 2,
+        "effect": "Can switch between its 2 elements",
+        "prefix" : [ "Bizarre",
+                     "Colourful",
+                     "Harmonic"
+                    ]
+        }
+}

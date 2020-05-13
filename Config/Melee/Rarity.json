@@ -1,0 +1,96 @@
+{
+	"common" : 		{
+						"common" : 0,
+						"effects" : [
+										{
+
+										}
+									]	
+					},
+
+	"uncommon" : 	{
+						"common" : 0,
+						"uncommon" : 1,
+						"effects" : [
+										{
+											"meleeHit" : 1
+										},
+										{
+											"meleeDamage" : 1
+										},
+										{
+											"rangedDamage" : 1
+										},
+										{
+											"effect" : "Regenerates 1HP every turn whilst this weapon is equipped. Has to be equiped before the turn begins."
+										}
+									]
+					},
+
+	"rare" : 		{
+						"common" : 0,
+						"uncommon" : 1,
+						"rare" : 1,
+						"effects" : [
+										{
+											"meleeHit" : 2
+										},
+										{
+											"meleeDamage" : 2
+										},
+										{
+											"rangedDamage" : 2
+										},
+										{
+											"effect" : "Grant a charge to deal a definite critical hit per every long rest. The maximum charges you can have is 1"
+										},
+										{
+											"range" : 5
+										},
+										{
+											"effect" : "You can choose how to split the damage delt between two seperate enemies in view. Only roll attack once"
+										}
+									]
+					},
+
+	"epic" :		{
+						"common" : 0,
+						"uncommon" : 1,
+						"rare" : 1,
+						"epic" : 1,
+						"effects" : [
+										{
+											"effect" : "On a critical hit, you can temporarily increase your max shield by 15 for 10 minutes"
+										},
+										{
+											"effect" : "On a successful hit, increase your health by 4 up to your maximum"
+										},
+										{
+											"effect" : "On a successful hit, increase your max movement by 10 for 30 seconds"
+										}	
+									]
+					},
+
+	"legendary" : 	{
+						"common" : 0,
+						"uncommon" : 1,
+						"rare" : 1,
+						"epic" : 1,
+						"legendary" : 1,
+						"effects" : [
+										{
+											"effect" : "You gain a max of 1 charge of Reaper per long rest. When used, every time you kill an opponent, you gain 1 main action point"
+										},
+										{
+											"effect" : "On a successful hit at the butt of the enemy, you deal critical damage"
+										},
+										{
+											"effect" : "The damage you deal to a enemy shield, you gain back as your shield"
+										},
+										{
+											"effect" : "The damage you deal to a enemy health, you gain back as your health"
+										}
+									]
+					}
+	
+}

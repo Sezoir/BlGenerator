@@ -1,0 +1,61 @@
+{
+  "random" : 
+  {
+    "distributions" : 
+                  {
+                  "UniformInt" : 
+                                  {
+                                  "general" : true,
+                                  "min" : 0,
+                                  "max" : 100000
+                                  },
+                  "ExponentialDouble" : 
+                                  {
+                                  "rarity" : true,
+                                  "param" : 2.5
+                                  }
+                  },
+    "rarity" : {
+                "weapon" : {
+                      "common" : 0.15,
+                      "uncommon" : 0.3,
+                      "rare" : 0.5,
+                      "epic" : 0.7,
+                      "legendary" : 1
+                  },
+                "shield" : {
+                      "common" : 0.2,
+                      "uncommon" : 0.4,
+                      "rare" : 0.6,
+                      "epic" : 0.8,
+                      "legendary" : 1
+                  },
+                "grenade" : {
+                      "common" : 0.2, 
+                      "uncommon" : 0.4,
+                      "rare" : 0.6,
+                      "epic" : 0.8,
+                      "legendary" : 1
+                  },
+                "classMod" : {
+                      "common" : 0.2,
+                      "uncommon" : 0.4,
+                      "rare" : 0.6,
+                      "epic" : 0.8,
+                      "legendary" : 1
+                  }
+               },
+    "objects" :
+              {
+                "weapon" : 0.25,
+                "shield" : 0.5,
+                "grenade" : 0.75,
+                "classMod" : 1
+              },
+  "weapon" :
+          {
+            "gun" : 0.85,
+            "sword" : 1
+          }
+  }
+}

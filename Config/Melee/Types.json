@@ -1,0 +1,17 @@
+{
+	"sword" :
+		{
+			"names" : [
+						"Sword",
+						"Blade",
+						"Katana"
+						],
+			"meleeDamage" : "1d6",
+			"attribute" : "Str",
+			"effect" : "Melee attacks in 5ft range. If two enemies are within range, can use a bonus action to attack both",
+			"ammo" : -1,
+			"parts" : [
+						"blade"
+						]
+		}
+}

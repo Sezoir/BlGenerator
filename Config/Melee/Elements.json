@@ -1,0 +1,65 @@
+{
+	"fire" : {
+				"prefix" : [
+							"Fire",
+							"Fiery",
+							"Flamey",
+							"Incendairy"
+							],
+				"elementBaseDamage" : "1d4",
+				"condition" : "When you hit an enemy who only has health remaining",
+				"elementEffect" : [
+									"Roll attack with advantage",
+									"Element Damage deal 2x damage to enemies"
+								   ],
+				"chanceMax" : 19,
+				"chanceMin" : 13
+			 },
+	"electricity" : {
+						"prefix" : [
+									 "Electric",
+									 "Shock",
+									 "Sparky",
+									 "Zappy"
+									],
+						"elementBaseDamage" : "1d4",
+						"condition" : "When you hit an enemy who has shield remaining",
+						"elementEffect" : [
+											"Roll attack with advantage",
+											"Element Damage deal 2x damage to enemies"
+										   ],
+						"chanceMax" : 19,
+						"chanceMin" : 13
+					},
+	"corrosion" : {
+						"prefix" : [
+									 "Acidic",
+									 "Corrosive",
+									 "Melty",
+									 "Crudy",
+									 "Dissolvd"
+									],
+						"elementBaseDamage" : "1d4",
+						"condition" : "When you hit an enemy who has armor remaining",
+						"elementEffect" : [
+											"Roll attack with advantage",
+											"Element Damage deal 2x damage to enemies"
+										   ],
+						"chanceMax" : 19,
+						"chanceMin" : 13
+					},
+	"explosive" : {
+					"prefix" : [
+								 "Explosive",
+								 "Boom boom",
+								 "Boomy",
+								 "Bangy"
+								],
+					"elementBaseDamage" : "1d8",
+					"condition" : "Always active",
+					"elementEffect" : [""],
+					"meleeHit" : 1,
+					"chanceMax" : 0,
+					"chanceMin" : 0
+				  }
+}

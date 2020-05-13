@@ -1,0 +1,11 @@
+{
+	"blade" : 	{
+					"hyperion" : {
+									"effect" : "Can be placed into the ground as half cover until removed."
+								 },
+					"eridium" : {
+									"elementDamage" : 3
+								}
+				}
+
+}

@@ -1,0 +1,26 @@
+{
+	"sword" : 	{
+					"6" : 	{
+								"meleeHit" : 1
+							},
+					"10" :  {
+								"meleeDamage" : "1d"
+							},
+					"11" :  {
+								"meleeHit" : 1
+							},
+					"16" :  {
+								"meleeHit" : 1
+							},
+					"20" :  {
+								"meleeDamage" : "1d"
+							},
+					"21" : 	{
+								"meleeHit" : 1
+							},
+					"26" :  {
+								"meleeHit" : 1,
+								"meleeDamage" : "1d"
+							}
+				}
+}

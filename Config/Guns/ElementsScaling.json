@@ -1,0 +1,110 @@
+{
+	"fire" : 			{
+							"6" : 	{
+										"elementChance" : -1
+									},
+							"10" :  {
+										"elementDamage" : { "damage": "1d", 
+													   		"type": "fire" }
+									},
+							"11" :  {
+										"elementChance" : -1
+									},
+							"16" :  {
+										"elementChance" : -1
+									},
+							"20" :  {
+										"elementDamage" : { "damage": "1d", 
+													  		"type": "fire" }
+									},
+							"21" : 	{
+										"elementChance" : -1
+									},
+							"26" :  {
+										"elementChance" : -1,
+										"elementDamage" : { "damage": "1d", 
+													   		"type": "fire" }
+									}
+						},
+    "electricity" : 	{
+							"6" : 	{
+										"elementChance" : -1
+									},
+							"10" :  {
+										"elementDamage" : { "damage": "1d", 
+													   		"type": "electricity" }
+									},
+							"11" :  {
+										"elementChance" : -1
+									},
+							"16" :  {
+										"elementChance" : -1
+									},
+							"20" :  {
+										"elementDamage" : { "damage": "1d", 
+													   		"type": "electricity" }
+									},
+							"21" : 	{
+										"elementChance" : -1
+									},
+							"26" :  {
+										"elementChance" : -1,
+										"elementDamage" : { "damage": "1d", 
+													   		"type": "electricity" }
+									}
+						},
+	"corrosion" :	 	{
+						"6" : 	{
+									"elementChance" : -1
+								},
+						"10" :  {
+									"elementDamage" : { "damage": "1d", 
+													   	"type": "corrosion" }
+								},
+						"11" :  {
+									"elementChance" : -1
+								},
+						"16" :  {
+									"elementChance" : -1
+								},
+						"20" :  {
+									"elementDamage" : { "damage": "1d", 
+													   	"type": "corrosion" }
+								},
+						"21" : 	{
+									"elementChance" : -1
+								},
+						"26" :  {
+									"elementChance" : -1,
+									"elementDamage" : { "damage": "1d", 
+													   	"type": "corrosion" }
+								}
+					},
+	"explosive" :	 	{
+						"6" : 	{
+									"elementDamage" : 1
+								},
+						"10" :  {
+									"elementDamage" : { "damage": "1d", 
+													    "type": "explosive"}
+								},
+						"11" :  {
+									"elementDamage" : 1
+								},
+						"16" :  {
+									"elementDamage" : 1
+								},
+						"20" :  {
+									"elementDamage" : { "damage": "1d", 
+													    "type": "explosive"}
+								},
+						"21" : 	{
+									"elementDamage" : 1
+								},
+						"26" :  {
+									"elementDamage" : 1,
+									"elementDamage" : { "damage": "1d", 
+													    "type": "explosive"}
+								}
+					}
+}

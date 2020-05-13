@@ -43,7 +43,7 @@ Item {
         x: 300
         y: 200
         width: 250
-        //height: 30
+        //height: 50
 
         elements: {
             "fire" :

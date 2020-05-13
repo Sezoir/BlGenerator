@@ -1,0 +1,146 @@
+{
+	"combatRifle" :	{
+						"6" : 	{
+									"rangedHit" : 1
+								},
+						"10" :  {
+									"rangedDamage" : "1d"
+								},
+						"11" :  {
+									"rangedHit" : 1
+								},
+						"16" :  {
+									"rangedHit" : 1
+								},
+						"20" :  {
+									"rangedDamage" : "1d"
+								},
+						"21" : 	{
+									"rangedHit" : 1
+								},
+						"26" :  {
+									"rangedHit" : 1,
+									"rangedDamage" : "1d"
+								}
+					},
+	"pistol" :	{
+						"6" : 	{
+									"rangedHit" : 1
+								},
+						"10" :  {
+									"rangedDamage" : "1d"
+								},
+						"11" :  {
+									"rangedHit" : 1
+								},
+						"16" :  {
+									"rangedHit" : 1
+								},
+						"20" :  {
+									"rangedDamage" : "1d"
+								},
+						"21" : 	{
+									"rangedHit" : 1
+								},
+						"26" :  {
+									"rangedHit" : 1,
+									"rangedDamage" : "1d"
+								}
+					},
+	"shotgun" :	{
+						"6" : 	{
+									"rangedHit" : 1
+								},
+						"10" :  {
+									"rangedDamage" : "1d"
+								},
+						"11" :  {
+									"rangedHit" : 1
+								},
+						"16" :  {
+									"rangedHit" : 1
+								},
+						"20" :  {
+									"rangedDamage" : "1d"
+								},
+						"21" : 	{
+									"rangedHit" : 1
+								},
+						"26" :  {
+									"rangedHit" : 1,
+									"rangedDamage" : "1d"
+								}
+					},
+	"smg" :	{
+						"6" : 	{
+									"rangedHit" : 1
+								},
+						"10" :  {
+									"rangedDamage" : "1d"
+								},
+						"11" :  {
+									"rangedHit" : 1
+								},
+						"16" :  {
+									"rangedHit" : 1
+								},
+						"20" :  {
+									"rangedDamage" : "1d"
+								},
+						"21" : 	{
+									"rangedHit" : 1
+								},
+						"26" :  {
+									"rangedHit" : 1,
+									"rangedDamage" : "1d"
+								}
+					},
+    "sniperRifle" :	{
+						"6" : 	{
+									"rangedHit" : 1
+								},
+						"10" :  {
+									"rangedDamage" : "1d"
+								},
+						"11" :  {
+									"rangedHit" : 1
+								},
+						"16" :  {
+									"rangedHit" : 1
+								},
+						"20" :  {
+									"rangedDamage" : "1d"
+								},
+						"21" : 	{
+									"rangedHit" : 1
+								},
+						"26" :  {
+									"rangedHit" : 1,
+									"rangedDamage" : "1d"
+								}
+					},
+	"rocketLauncher" :	{
+						"6" : 	{
+									"rangedHit" : 1
+								},
+						"10" :  {
+									"rangedDamage" : "1d"
+								},
+						"11" :  {
+									"rangedHit" : 1
+								},
+						"16" :  {
+									"rangedHit" : 1
+								},
+						"20" :  {
+									"rangedDamage" : "1d"
+								},
+						"21" : 	{
+									"rangedHit" : 1
+								},
+						"26" :  {
+									"rangedHit" : 1,
+									"rangedDamage" : "1d"
+								}
+					}
+}

@@ -1,0 +1,48 @@
+{
+    "bandit": 
+                        {
+                        "meleeDamage": 2,
+                        "elements": 
+                                    [
+                                        "fire",
+                                        "electricity",
+                                        "corrosion"
+                                    ],
+                        "numberElements": 1,
+                        "prefix" : 
+                                    [ 
+                                        "BIG FUCKIN",
+                                        "Slashy Slashy",
+                                        "Wacky"
+                                    ]
+                        },
+    "torgue": 
+                      	{
+                            "elements": ["explosive"],
+                            "numberElements": 1,
+                            "prefix" : 
+                                        [ 
+                                            "Explosive",
+                                            "BOOOOM",
+                                            "MOTHAF*CKIN",
+                                            "BAM"
+                                        ],
+                            "effect" : "Enemies in a 1ft radius of the enemy hit also take damage each to 1d4"
+                        },
+    "maliwan": 
+                        {
+                            "elements" : 
+                                            [
+                                                "fire",
+                                                "electricity",
+                                                "corrosion"
+                                            ],
+                            "numberElements": 2,
+                            "prefix" : 
+                                        [ 
+                                            "Bizarre",
+                                            "Colourful",
+                                            "Harmonic"
+                                        ]
+                        }
+}

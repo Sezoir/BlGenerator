@@ -1,0 +1,118 @@
+{
+	"combatRifle" : 
+						{
+							"names" : [
+										"Rifle",
+										"Carbine",
+										"AR",
+										"Shooter"
+										],
+							"rangedDamage" : "1d6",
+							"attribute" : "Dex",
+							"damage" : 1,
+							"hit" : 1,
+							"ammo" : 12,
+							"parts" : 	[
+											"sight",
+											"stock",
+											"trigger",
+											"barrel"
+										]
+						},
+	"pistol" :
+						{
+							"names" : [
+										"Pistol",
+										"Handgun",
+										"Handcannon",
+										"Blaster"
+									  ],	
+							"rangedDamage" : "1d4",
+							"attribute" : "Dex",
+							"effect" : "Can be duel wield with another pistol",
+							"ammo" : 10,
+							"parts" : 	[
+											"sight",
+											"stock",
+											"trigger",
+											"barrel"
+										]
+						},
+	"shotgun" :
+						{
+							"names" : [
+										"Shotgun",
+										"Shotty",
+										"Buckshot",
+										"Rod"
+									  ],
+							"rangedDamage" : "1d8",
+							"attribute" : "Str",
+							"effect" : "Shoots in a 15ft cone radius around the target, dealing half as much damage to others hit",
+							"ammo" : 4,
+							"parts" : 	[
+											"sight",
+											"stock",
+											"trigger",
+											"barrel"
+										]
+						},
+	"smg" :
+						{
+							"names" :	[
+											"SMG",
+											"Subby",
+											"Fast Fire",
+											"Hip Fire"
+									 	 ],
+							"rangedDamage" : "1d4",
+							"attribute" : "Dex",
+							"effect" : "Can fire twice in a single turn",
+							"ammo" : 18,
+							"parts" : 	[
+											"sight",
+											"stock",
+											"trigger",
+											"barrel"
+										]
+						},
+	"sniperRifle" :
+						{
+							"names" : [
+										"Sniper",
+										"Longshot",
+										"Marksman",
+										"Sharpshooter"
+								  	  ],
+							"rangedDamage" : "1d10",
+							"attribute" : "Dex",
+							"effect" : "Can take a -5 penality to hit before roll to double damage",
+							"ammo" : 8,
+							"parts" :	[
+											"sight",
+											"stock",
+											"trigger",
+											"barrel"
+										]
+						},
+	"rocketLauncher" :
+						{
+							"names" : [
+										"Launcher",
+										"Boom Boom",
+										"Decimator",
+										"Destroyer"
+									  ],
+							"rangedDamage" : "1d12",
+							"attribute" : "Str",
+							"effect" : "Deals damage to a 20ft radius",
+							"ammo" : 2,
+							"parts" : 	[
+											"sight",
+											"stock",
+											"trigger",
+											"barrel",
+											"rocket"
+										]
+						}
+}

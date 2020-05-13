@@ -1,0 +1,119 @@
+{
+	"common" : 		{
+						"common" : 0,
+						"effects" : [
+										{
+
+										}
+									]	
+					},
+
+	"uncommon" : 	{
+						"common" : 0,
+						"uncommon" : 1,
+						"effects" : [
+										{
+											"rangedHit" : 1
+										},
+										{
+											"meleeDamage" : 1
+										},
+										{
+											"rangedDamage" : 1
+										},
+										{
+											"effect" : "Regenerates 1HP every turn whilst this weapon is equipped. Has to be equiped before the turn begins."
+										},
+										{
+											"ammo" : 1
+										}
+									]
+					},
+
+	"rare" : 		{
+						"common" : 0,
+						"uncommon" : 1,
+						"rare" : 1,
+						"effects" : [
+										{
+											"rangedHit" : 2
+										},
+										{
+											"meleeDamage" : 2
+										},
+										{
+											"rangedDamage" : 2
+										},
+										{
+											"range" : 10
+										},
+										{
+											"ammo" : 2
+										},
+										{
+											"effect" : "Once per long rest, you can reload without the cost of an action point"
+										},
+										{
+											"effect" : "You can choose how to split the damage delt between two seperate enemies in view. Only roll attack once"
+										},
+										{
+											"effect" : "Weapon can be used twice, once on attack and once as a bonus"
+										}
+									]
+					},
+
+	"epic" :		{
+						"common" : 0,
+						"uncommon" : 1,
+						"rare" : 1,
+						"epic" : 1,
+						"effects" : [
+										{
+											"rangedHit" : 3
+										},
+										{
+											"rangedDamage" : 3
+										},
+										{
+											"meleeDamage" : 3
+										},
+										{
+											"ammo" : 3
+										},
+										{
+											"effect" : "Once per long rest, you can bypass an enemy's SC or AC and roll damage with this gun"
+										},
+										{
+											"effect" : "You can still roll for elemental attack even if your normal attack misses"
+										},
+										{
+											"effect" : "Elemental damage can spread to all enemies in a 10ft radius. For all enemies in the vicinity, make an elemental attack roll."
+										}	
+									]
+					},
+
+	"legendary" : 	{
+						"common" : 0,
+						"uncommon" : 1,
+						"rare" : 1,
+						"epic" : 1,
+						"legendary" : 1,
+						"effects" : [
+										{
+											"effect" : "On a critical hit, instead of double damage, the gun can fire all available ammo at once, where each ammo has a seperate damage rolled"
+										},
+										{
+											"effect" : "On a successfull hit, your bullet can ricochet to a enemy 10ft away. Roll a new attack roll for this. Can be chained between enemies"
+										},
+										{
+											"rangedHit" : 6,
+											"rangedDamage" : -3
+										},
+										{
+											"meleeDamage" : "3d6",
+											"rangedDamage": -7
+										}
+									]
+					}
+	
+}
